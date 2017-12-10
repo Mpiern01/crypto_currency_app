@@ -13,11 +13,33 @@
 </ion-header>
 
 <ion-content padding>
+  
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <span id="colname">Coin Name</span>
+      </ion-col>
+      <ion-col>
+      <button ion-button icon-left clear (click)="refreshCoins()" id="refresh" color="light">
+        <ion-icon name="refresh"></ion-icon>
+        Refresh
+      </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
  
  <ion-list *nglf="coins">
-   <ion-item *ngFor="let coin of objectKeys(coins)">
-     {{coin}}
-   </ion-item>
+   <ion-item-sliding *ngFor="let coin of objectKeys(coins), let i = index" (ionDrag)="swipde(i)">
+  
+  <ion-item no-lines>
+    {{coin}}
+    <ion-note item-end color="bluetxt">
+      {{coins[coin.usd | currency:'USD' :true}}
+    </ion-note>
+  </ion-item>
+   </ion-item-sliding>
+    
    
  </ion-list>
  

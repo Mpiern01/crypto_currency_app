@@ -8,6 +8,8 @@
 # Task 2  = Adjust JSON pages from 2015 to 2017 for use. 
 # Task 3  = Set up first app framework and first  API Call.
 # Task 4  = Structure the API Call to be dynamic.
+# Task 5  = Desiging the Toolbar.
+# Task 6  = Styling the Coin List
 
 
 
