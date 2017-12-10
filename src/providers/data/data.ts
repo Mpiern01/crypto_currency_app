@@ -27,4 +27,17 @@ export class DataProvider {
     
   }
 
+getCoin (coin) {
+    let coinlist = '';
+ return this._http.get("https://min-api.cryptocompare.com/data/pricemultifull?fsyms="+ coin+"&tsyms=USD")
+      .map(result => this.result = result);
+}
+
+
+getChart (coin) {
+    let coinlist = '';
+ return this._http.get("https://min-api.cryptocompare.com/data/histoday?fsym="+coin+"&tsyms=USD=USD&limit=30&aggregate=1,")
+      .map(result => this.result = result);
+}
+
 }

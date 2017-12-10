@@ -32,14 +32,40 @@
  <ion-list *nglf="coins">
    <ion-item-sliding *ngFor="let coin of objectKeys(coins), let i = index" (ionDrag)="swipde(i)">
   
-  <ion-item no-lines>
+  <ion-item  (click)="coinDetails(coin,i)" no-lines>
     {{coin}}
     <ion-note item-end color="bluetxt">
       {{coins[coin.usd | currency:'USD' :true}}
     </ion-note>
   </ion-item>
+  <ion-item-options>
+    <button ion-button (click)="removeCoin(coin)"><ion-icon name="close" class="size"></ion-icon></button>
+  </ion-item-options>
    </ion-item-sliding>
-    
+    <ion-item class= "details" *ngIf="detailToggle[i]" no-lines>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <span class="label">MarketCap</span>
+            <span class="answer">{{ details.MKTCAP }}</span>
+          </ion-col>
+            <ion-col>
+            <span class="label">Change (24HR)</span>
+            <span class="answer">{{ details.CHANGE24HOUR }} ({{ details.CHANGEPCT24HOUR }}%)</span>
+          </ion-col>
+            <ion-col>
+            <span class="label">High (24HR)</span>
+            <span class="answer">{{ details.HIGH24HOUR }}</span>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <br>
+            <span class="label">Price (30Days)</span>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
    
  </ion-list>
  
