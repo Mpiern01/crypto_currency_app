@@ -3,6 +3,7 @@ import { NavController } from 'ionic-angular';
 import { DataProvider } from '../../providers/data/data';
 import { IonicStorageModule } from '@ionic/storage';
 import { Chart } from 'chart.js';
+import { LoadingController } from 'ionic-angular';
 
 @Component({
   selector: 'page-home',
@@ -19,7 +20,7 @@ export class HomePage {
   
   
 
-  constructor(public navCtrl: NavController, private_data: DataProvider, private_storage: Storage) {
+  constructor(public navCtrl: NavController, private_data: DataProvider, private_storage: Storage, public loading: LoadingController) {
   this.storage.remove('likedCoins');
 }
 
@@ -34,6 +35,17 @@ ionViewWillEnter(){
 
 
 refreshCoins(){
+  
+  let loader = this.loading.create({
+    content:'Refreshing..',
+    spinner: 'bubbles'
+  }),
+  
+  loader.present().then(() => {
+    this.storage.get('likedCoins').then((val => {
+      
+    }))
+  }
 
   this.storage.get('likedCoins').then((val) => {
     
@@ -45,8 +57,13 @@ refreshCoins(){
       this._data.getCoins(this.likedCoins)
       .subscribe(res => {
         this.coins = res;
+        loader.dismiss();
       })
     }
+    
+
+    
+    
     // It's set
     else {
       this.likedCoins = val;
@@ -54,11 +71,14 @@ refreshCoins(){
       this._data.getCoins(this.likedCoins)
       .subscribe(res => {
         this.coins = res;
+        loader.dismiss();
       })
       
     }
     
-  })
+  });
+  
+});
   
   coinDetails(coin,index) {
     if (this.detailToggle[index])
