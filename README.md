@@ -13,6 +13,7 @@ Crypto API Data https://www.cryptocompare.com/api/#-api-data-price-
 # Task 5  = Desiging the Toolbar.
 # Task 6  = Styling the Coin List.
 # Task 7  = Coin Details Template and Addtional API calls.
+# Task 8  = Coin Chart and historic data
 
 
 

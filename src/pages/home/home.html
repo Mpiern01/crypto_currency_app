@@ -41,7 +41,7 @@
   <ion-item-options>
     <button ion-button (click)="removeCoin(coin)"><ion-icon name="close" class="size"></ion-icon></button>
   </ion-item-options>
-   </ion-item-sliding>
+   
     <ion-item class= "details" *ngIf="detailToggle[i]" no-lines>
       <ion-grid>
         <ion-row>
@@ -62,11 +62,13 @@
           <ion-col>
             <br>
             <span class="label">Price (30Days)</span>
+          <canvas id="canvas{{i}}">{{ chart[i] }}</canvas>
           </ion-col>
         </ion-row>
       </ion-grid>
     </ion-item>
    
- </ion-list>
- 
+
+ </ion-item-sliding>
+  </ion-list>
 </ion-content>
