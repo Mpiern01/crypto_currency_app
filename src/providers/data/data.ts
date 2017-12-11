@@ -40,4 +40,10 @@ getChart (coin) {
       .map(result => this.result = result);
 }
 
+allCoins() {
+  let headers= new HttpHeaders()
+  .set("Access-Control-Allow-Origin", "*");
+  
+  return this_http.get("https://www.cryptocompare.com/api/data/coinlist", {headers: headers})
+      .map(result => this.result = result);
 }

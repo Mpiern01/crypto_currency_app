@@ -4,6 +4,7 @@ import { DataProvider } from '../../providers/data/data';
 import { IonicStorageModule } from '@ionic/storage';
 import { Chart } from 'chart.js';
 import { LoadingController } from 'ionic-angular';
+import { SearchPage } from '../search/search';
 
 @Component({
   selector: 'page-home',
@@ -160,5 +161,8 @@ removeCoin(coin) {
 
 }
 
+showSearch() {
+  this.navCtrl.push(SearchPage);
+}
 
 }
