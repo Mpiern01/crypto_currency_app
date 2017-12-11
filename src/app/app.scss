@@ -17,28 +17,27 @@
 
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700');
 
-ion-content{
+ion-content {
     font-family: 'Source Sans Pro';
 }
 
-.bar-buttondefault-md, .bar-button-clear-md-default, .bar-button-md-default {
-    background-color: rgba(0, 0, 0.15) !important;
+.bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default {
+    background-color: rgba(0, 0, 0, 0.15) !important;
 }
 
 .bar-button-md[icon-only] {
     padding:10px;
-    
 }
 
 .scroll-content {
     padding: 0 !important;
 }
 
-ion-item, coinbtn {
-    background #1E4871 !important;
+ion-item, .coinbtn {
+    background: #1E4871 !important;
     margin-bottom: 0 !important;
     border-bottom: 1px solid #19232c !important;
-    color: #C1EgFF !important;
+    color: #C1E6FF !important;
 }
 
 .details {
@@ -46,8 +45,8 @@ ion-item, coinbtn {
 }
 
 .loading-md .loading-wrapper {
-    background: #c102D49 !importaint;
+    background:#102D49 !important;
     color: #C1E6FF !important;
     text-transform: uppercase;
-    font-size: .8em;
+    font-size:.8em;
 }
