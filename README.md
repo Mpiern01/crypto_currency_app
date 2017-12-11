@@ -17,7 +17,7 @@ Crypto API Data https://www.cryptocompare.com/api/#-api-data-price-
 # Task 9  = Removing Coins
 # Task 10 = Adding loading controller
 # Task 11 = Adding in Search ability
-
+# Task 12 = adding in crypto currency AI bot and Dockerizing Application (disconnected in public version)
 
 
 

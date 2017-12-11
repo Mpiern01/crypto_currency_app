@@ -1,4 +1,4 @@
-#loco {
+#logo {
     max-width: 40% !important;
 }
 .col {
@@ -9,7 +9,7 @@
 }
 #colname {
     text-transform:uppercase;
-    color: #466581;
+    color:#466581;
     margin: 13px 0 0 10px;
     display:block;
 }
@@ -26,24 +26,19 @@ span.answer {
 }
 
 .end {
-    test-align:right,
-    
+    text-align:right;
 }
 
-.list-md ion-item-options .button{
-    height: 45px !importaint;
+.list-md ion-item-options .button {
+    height: 45px !important;
     background-color: #19232C !important;
 }
 
 .list-md ion-item-options {
-    boarder-bottom:0;
-    
+    border-bottom: 0;
 }
 
 .size {
     font-size:28px;
-    padding: 10px;
+    padding:10px;
 }
-
-
-
